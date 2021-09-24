@@ -1,0 +1,34 @@
+{
+    "name": "TheBetterSlots.com",
+    "short_name": "TheBetterSlots.com",
+    "icons": [
+        {
+            "src": "/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "purpose": "maskable",
+            "type": "image/png"
+        },
+        {
+            "src": "/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "purpose": "maskable",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "purpose": "any",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "purpose": "any",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#121114",
+    "background_color": "#000000",
+    "start_url": "./",
+    "display": "standalone"
+}
