@@ -16,6 +16,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
+        working-directory: src/
         ruby-version: 3.0
         bundler-cache: true
         
