@@ -5,11 +5,11 @@
 
 $primary: #12c2e9;
 $secondary: #c471ed;
-$success: #f64f59;
+$danger: #f64f59;
 
-$info: #4b61b4;
+$success: #539E43;
 $warning: #e9b72b;
-$danger: #E90C1B;
+$info: #91DFE3;
 
 $light: #F5F7F8;
 $dark: #121516;
@@ -32,9 +32,9 @@ $spacers: (
 @import "bootstrap/bootstrap";
 
 @mixin bg-gradient() {
-    background: $success;
-    background: -webkit-linear-gradient(to left, $success, $secondary, $primary);
-    background: linear-gradient(to left, $success, $secondary, $primary);
+    background: $danger;
+    background: -webkit-linear-gradient(to left, $danger, $secondary, $primary);
+    background: linear-gradient(to left, $danger, $secondary, $primary);
 }
 
 ::selection {
