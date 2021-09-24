@@ -28,6 +28,17 @@
 
     <link rel="stylesheet" href="{{ 'css/styles.css' | relative_url }}?{{site.time | date: '%s' }}">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-629QNE91VX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '{{site.gtm-id}}');
+    </script>
+</head>
+
 <body>
     <div id="container" class="d-flex flex-column">
         <section>
