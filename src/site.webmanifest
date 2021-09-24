@@ -18,6 +18,12 @@ layout: null
             "type": "image/png"
         },
         {
+            "src": "/maskable_icon.png",
+            "sizes": "1024x1024",
+            "purpose": "maskable",
+            "type": "image/png"
+        },
+        {
             "src": "/android-chrome-192x192.png",
             "sizes": "192x192",
             "purpose": "any",
