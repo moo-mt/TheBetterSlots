@@ -6,4 +6,6 @@ ver: 0.0.0-local
 livereload: true
 host: 0.0.0.0
 permalink: pretty
+sass:
+    sass_dir: _sass
 # gtm-id: G-BHPW53QJ18
