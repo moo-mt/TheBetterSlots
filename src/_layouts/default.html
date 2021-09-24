@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="language" content="english">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta name="version" content="{{site.ver}}" />
+
+    <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:image:alt" content="TheBetterSlots.com Logo" />
+
+    <link rel="stylesheet" href="{{ 'css/styles.css' | relative_url }}?{{site.time | date: '%s' }}">
+
+<body>
+    <header>
+
+
+    </header>
+
+    <section>
+        {{ content }}
+    </section>
+
+    <footer>
+
+
+    </footer>
+
+    <script src="{{ 'js/script.js' | relative_url }}?{{site.time | date: '%s' }}"></script>
+    {% include pwa-module.html %}
+</body>
+
+</html>
