@@ -1,4 +1,92 @@
 ---
 ---
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+$primary: #12c2e9;
+$secondary: #c471ed;
+$success: #f64f59;
+
+$info: #4b61b4;
+$warning: #e9b72b;
+$danger: #E90C1B;
+
+$light: #F5F7F8;
+$dark: #121516;
+
+$headings-font-family: "Lato", sans-serif;
+
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 5,
+    7: $spacer * 10,
+    8: $spacer * 15,
+) !default;
+
 @import "bootstrap/bootstrap";
+
+@mixin bg-gradient() {
+    background: $success;
+    background: -webkit-linear-gradient(to left, $success, $secondary, $primary);
+    background: linear-gradient(to left, $success, $secondary, $primary);
+}
+
+::selection {
+    background: $primary;
+    color: $light;
+}
+
+body,
+html {
+    height: 100%;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7em;
+    background: $dark;
+    color: $light;
+    scrollbar-color: $primary $dark;
+
+    &::-webkit-scrollbar-track {
+        background: $dark;
+        scrollbar-color: $primary $dark;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        border-radius: 5px;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+#container{
+    min-height: 100vh;
+    height: 100%;
+}
+
+.text_gradient {
+    @include bg-gradient();
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: left center;
+
+    &::selection {
+        background-clip: initial;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+    }
+}
+
+.bg_gradient{
+    @include bg-gradient();
+}
