@@ -1,6 +1,6 @@
 ---
+title: test
 layout: default
-title: Home
 ---
 
 <div class="container">
@@ -15,19 +15,20 @@ title: Home
     <div class="text-left">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
+                {% for casino in site.casinos %}
                 <div class="card bg-dark border-light">
                     <div class="bg-light" style="height: 12em; width: 100%;"></div>
                     <div class="card-body ">
-                        <h4 class="text_gradient">CasinoFriday.com</h3>
+                        <h4 class="text_gradient">{{ casino.SiteName }}</h3>
                             <p class="card-text">
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                                {{ casino.content }}</p>
                             <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-outline-primary">Visit Casino</button>
-                                <span class="text-primary">90%</span>
+                                <a href="{{casino.AffiliateLink}}" class="btn btn-outline-primary" rel="noopener" target="_blank">Visit Casino</a>
+                                <span class="text-primary">{{casino.Rating}}%</span>
                             </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>

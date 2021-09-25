@@ -10,3 +10,6 @@ sass:
     sass_dir: _sass
     style: compressed
 gtm-id: G-629QNE91VX
+collections:
+  casinos:
+    output: true
