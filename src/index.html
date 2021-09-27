@@ -13,23 +13,42 @@ layout: default
         </p>
     </div>
     <div class="text-left">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-                {% for casino in site.casinos %}
-                <div class="card bg-dark border-light">
-                    <div class="bg-light" style="height: 12em; width: 100%;"></div>
-                    <div class="card-body ">
-                        <h4 class="text_gradient">{{ casino.SiteName }}</h3>
-                            <p class="card-text">
-                                {{ casino.content }}</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="{{casino.AffiliateLink}}" class="btn btn-outline-primary" rel="noopener" target="_blank">Visit Casino</a>
-                                <span class="text-primary">{{casino.Rating}}%</span>
-                            </div>
+        {% for casino in site.casinos %}
+        <div class="card text-dark">
+            <div class="d-flex flex-row align-items-center">
+                <div class="p-3">
+                    <img src="{{ casino.Logo | relative_url }}" alt="HappyHour.io Logo" />
+                </div>
+                <div class="p-3">
+                    <h4>
+                        <span class="text_gradient">
+                            {{ casino.SiteName }}
+                        </span>
+                    </h4>
+                    <div>
+                        {{ casino.content }}
+                    </div>
+                    <div>
+                        {% for topFeature in casino.TopFeatures %}
+                        <span class="btn btn-info py-0 px-2" style="font-size: 0.9em;">{{ topFeature }}</span>
+                        {% endfor %}                        
                     </div>
                 </div>
-                {% endfor %}
+                <div class="p-3">
+                    <h4>
+                        <span class="text-warning">
+                            {{casino.Rating}}%
+                        </span>
+                    </h4>
+                </div>
+                <div class="p-3">
+                    <a href="{{casino.AffiliateLink}}" class="btn btn-outline-primary text-nowrap" rel="noopener"
+                        target="_blank">
+                        Visit Casino
+                    </a>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
