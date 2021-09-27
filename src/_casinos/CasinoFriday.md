@@ -3,6 +3,7 @@ SiteName: CasinoFriday
 Banner: images/casinos/CasinoFriday/welcome-bonus.jpg
 URL: https://www.casinofriday.com/
 AffiliateLink: https://www.casinofriday.com/?affcode=test
+SortOrder: 1
 Bonus: 100% up to €500 + 200 FS
 MinimumDeposit: €20
 DepositMethods:
