@@ -34,7 +34,7 @@ jobs:
       working-directory: src/
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: TheBetterSlots.com_${{ steps.gitversion.outputs.semVer }}
         path: ./src/_site
